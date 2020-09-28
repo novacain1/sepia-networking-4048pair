@@ -19,10 +19,10 @@ Note that the switches *must* be reachable via their IPv4 management interface (
 ## Other notes
 
 1. If you get a failure of execution due to not being able to iterate over a dictionary in python, more than likely the Dell OS9 modules need patching.
-  1. Look under the directory templates/dellos9_system.js
-  2. I ran into issues with both the system role and the ntp role.
+    +  Look under the directory templates/dellos9_system.js
+    + I ran into issues with both the system role and the ntp role.
 2. If you have already run this playbook once, running it in again may cause errors as the vLT is already configured.
-  1. The hammer method is to delete the vLT configuration and port-channels, which will allow you to launch this playbook again.  This will be disruptive to network traffic, so be careful if choosing this option.
+    + The hammer method is to delete the vLT configuration and port-channels, which will allow you to launch this playbook again.  This will be disruptive to network traffic, so be careful if choosing this option.
 
 ## Other helpful Links
 * https://ansible-dellos-docs.readthedocs.io/en/latest/intro.html
