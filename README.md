@@ -5,11 +5,11 @@ Note that the switches *must* be reachable via their IPv4 management interface (
 
 ## Instructions & Prerequisites
 
-0. `git clone https://github.com/novacain1/sepia-networking-4048pair`
-1. Edit `hosts` file and set ansible_password to the proper value.
-2. Locally download the Galaxy Dell Networking roles that are written specifically to modify Dell switches - `ansible-galaxy install -r ansible-roles/dellos9_roles.yml`.
-3. Change any desired configuration parameters in the `host_vars` directory for either sw01 or sw02.
-4. Run the playbook with `ansible-playbook dell-switches-sepialab.yml.``
+1. `git clone https://github.com/novacain1/sepia-networking-4048pair`
+2. Edit `hosts` file and set ansible_password to the proper value.
+3. Locally download the Galaxy Dell Networking roles that are written specifically to modify Dell switches - `ansible-galaxy install -r ansible-roles/dellos9_roles.yml`.
+4. Change any desired configuration parameters in the `host_vars` directory for either sw01 or sw02.
+5. Run the playbook with `ansible-playbook dell-switches-sepialab.yml.``
 
 ## Tested on
 
@@ -19,10 +19,10 @@ Note that the switches *must* be reachable via their IPv4 management interface (
 ## Other notes
 
 1. If you get a failure of execution due to not being able to iterate over a dictionary in python, more than likely the Dell OS9 modules need patching.
-  * Look under the directory templates/dellos9_system.js
-  * I ran into issues with both the system role and the ntp role.
+  1. Look under the directory templates/dellos9_system.js
+  2. I ran into issues with both the system role and the ntp role.
 2. If you have already run this playbook once, running it in again may cause errors as the vLT is already configured.
-  * The hammer method is to delete the vLT configuration and port-channels, which will allow you to launch this playbook again.  This will be disruptive to network traffic, so be careful if choosing this option.
+  1. The hammer method is to delete the vLT configuration and port-channels, which will allow you to launch this playbook again.  This will be disruptive to network traffic, so be careful if choosing this option.
 
 ## Other helpful Links
 * https://ansible-dellos-docs.readthedocs.io/en/latest/intro.html
