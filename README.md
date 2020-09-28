@@ -5,7 +5,7 @@ Note that the switches *must* be reachable via their IPv4 management interface (
 
 ## Instructions & Prerequisites
 
-0. Git clone this repo.
+0. `git clone https://github.com/novacain1/sepia-networking-4048pair`
 1. Edit `hosts` file and set ansible_password to the proper value.
 2. Locally download the Galaxy Dell Networking roles that are written specifically to modify Dell switches - `ansible-galaxy install -r ansible-roles/dellos9_roles.yml`.
 3. Change any desired configuration parameters in the `host_vars` directory for either sw01 or sw02.
